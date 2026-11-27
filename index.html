@@ -42,7 +42,7 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
     }
 
@@ -69,6 +69,13 @@
     }
 
     h1 { font-size: 32px; color: #ffffff; }
+
+    .intro {
+      color: #d4d4d4;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
 
     .download-box {
       background: rgba(0, 0, 0, 0.7);
@@ -117,9 +124,24 @@
     .stat-val { font-size: 22px; font-weight: 800; color: #ffffff; }
     .stat-lbl { font-size: 12px; color: #a3a3a3; margin-top: 4px; text-transform: uppercase; }
 
-    h2 { font-size: 20px; margin-bottom: 12px; color: #ffffff; border-bottom: 1px solid #333333; padding-bottom: 8px; }
+    h2 { font-size: 20px; margin-top: 28px; margin-bottom: 12px; color: #ffffff; border-bottom: 1px solid #333333; padding-bottom: 8px; }
     ol { padding-left: 22px; color: #e5e5e5; line-height: 1.8; }
+    ul { list-style-type: '- '; padding-left: 22px; color: #e5e5e5; line-height: 1.8; }
+    ol ul { margin-top: 6px; color: #cccccc; }
+    li { margin-bottom: 6px; }
     code { background: #141414; border: 1px solid #333333; padding: 2px 6px; border-radius: 5px; color: #ffffff; font-size: 14px; }
+
+    .faq-item {
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .faq-q { font-weight: 700; color: #ffffff; margin-bottom: 6px; font-size: 15px; }
+    .faq-a { color: #cccccc; font-size: 14px; line-height: 1.6; }
+
     .footer { margin-top: 32px; text-align: center; color: #737373; font-size: 13px; }
   </style>
 </head>
@@ -133,26 +155,59 @@
       </div>
     </div>
 
+    <p class="intro">
+      A custom BepInEx 5 plugin for the PC version of <em>The Walking Zombie 2</em> that introduces a standalone, high-reach Broom melee weapon to your arsenal without replacing or breaking existing melee items like the Pitchfork, Baseball Bat, or Crowbar.
+    </p>
+
     <div class="stats">
       <div class="stat-card"><div class="stat-val">57</div><div class="stat-lbl">Damage</div></div>
       <div class="stat-card"><div class="stat-val">0.45s</div><div class="stat-lbl">Cooldown</div></div>
-      <div class="stat-card"><div class="stat-val">2x</div><div class="stat-lbl">Extended Reach</div></div>
-      <div class="stat-card"><div class="stat-val">137,984</div><div class="stat-lbl">Silver Value</div></div>
+      <div class="stat-card"><div class="stat-val">Extended</div><div class="stat-lbl">Reach</div></div>
+      <div class="stat-card"><div class="stat-val">~136k</div><div class="stat-lbl">Silver Value</div></div>
     </div>
 
     <div class="download-box">
-      <a class="btn" href="BroomWeaponMod.zip" download>⬇ Download BroomWeaponMod.zip (v1.0)</a>
+      <a class="btn" href="BroomWeaponMod.zip" download>⬇ Download BroomWeaponMod.zip</a>
       <p class="file-meta">Requires BepInEx 5 (x64) - Compatible with all weapons</p>
     </div>
 
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Non-Destructive Weapon Injection:</strong> Adds the Broom as an independent item rather than overwriting vanilla weapons or textures.</li>
+      <li><strong>Extended Crowd-Control Range:</strong> With extended melee reach and a fast <code>0.45s</code> swing cooldown, the Broom lets you clear walkers before they enter grab range.</li>
+      <li><strong>Trader Availability:</strong> Integrates naturally into gameplay—purchase the Broom directly from in-game traders as you progress through settlements.</li>
+      <li><strong>Custom UI Icon:</strong> Includes a dedicated inventory icon bundled directly in the plugin folder.</li>
+    </ul>
+
     <h2>How to Install</h2>
     <ol>
-      <li>Install <strong>BepInEx 5 (x64)</strong> into your <em>The Walking Zombie 2</em> game folder if you haven't already.</li>
+      <li>Install <strong>BepInEx 5 (x64)</strong> into your <em>The Walking Zombie 2</em> game folder and run the game once to generate the <code>plugins</code> folder.</li>
       <li>Extract <code>BroomWeaponMod.zip</code> directly into your main <em>The Walking Zombie 2</em> folder so <code>BroomWeaponMod.dll</code> and the icon land inside <code>BepInEx\plugins\BroomWeaponMod\</code>.</li>
-      <li>Launch the game, load your save, and press <code>F8</code> to add the <strong>Broom</strong> to your inventory!</li>
+      <li>Launch the game, load your save, and purchase the <strong>Broom</strong> from in-game traders (spawn chance by settlement):
+        <ul>
+          <li>Woodlands: 1%</li>
+          <li>Springfield: 2%</li>
+          <li>City of the Sun: 3%</li>
+          <li>Northtown: 4%</li>
+        </ul>
+      </li>
     </ol>
 
-    <div class="footer">Created with C# &amp; Harmony - The Walking Zombie 2 Broom Weapon Mod v1.0</div>
+    <h2>Troubleshooting &amp; FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-q">Broom isn't showing up at traders</div>
+      <div class="faq-a">Because the spawn chance is low (1%–4% depending on the settlement), it may take a few trader inventory refreshes to appear. Also, double-check that you installed the <strong>x64</strong> version of BepInEx 5 (not x86 or BepInEx 6).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Folder structure issues</div>
+      <div class="faq-a">Make sure you didn't accidentally create a nested folder (such as <code>BepInEx\plugins\BroomWeaponMod\BroomWeaponMod</code>). The <code>.dll</code> file should sit directly inside <code>BepInEx\plugins\BroomWeaponMod\</code>.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it safe to remove?</div>
+      <div class="faq-a">Yes—because this mod uses Harmony patches at runtime, removing the <code>BroomWeaponMod</code> folder cleanly uninstalls the plugin.</div>
+    </div>
+
+    <div class="footer">Created with C# &amp; Harmony - The Walking Zombie 2 Broom Weapon Mod</div>
   </div>
 </body>
 </html>
