@@ -1,5 +1,5 @@
 The Walking Zombie 2 Broom Weapon Mod
-The Walking Zombie 2 Broom Weapon Mod is a custom BepInEx 5 plugin for the PC version of The Walking Zombie 2 that introduces a brand-new, high-reach melee weapon to your arsenal. Built with C# and Harmony, this mod injects a standalone Broom weapon directly into the game without replacing or breaking existing melee items like the Pitchfork, Baseball Bat, or Crowbar.
+The Walking Zombie 2 Broom Weapon Mod is a custom BepInEx 5 plugin for the PC version of The Walking Zombie 2 that introduces a brand-new, high-reach melee weapon to your arsenal. Built with C# and Harmony, this mod injects a standalone Broom weapon directly into the game without replacing or breaking existing melee items like the Pitchfork, Baseball Bat, or Big Axe.
 
 Weapon Stats & Overview:
 
