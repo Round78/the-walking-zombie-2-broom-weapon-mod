@@ -20,17 +20,26 @@ Trader Availability: Integrates naturally into gameplay—you can purchase the B
 - Northtown: 4%
 
 Custom UI Icon: Includes a dedicated inventory icon (BroomWeaponMod) bundled in the plugin folder.
-Requirements
+
+Requirements:
+
 Game Version: The Walking Zombie 2 (PC / Steam, 64-bit)
+
 Mod Loader: BepInEx 5 (x64) installed and initialized (run the game once after installing BepInEx so the plugins folder is generated).
-How to Install
+How to Install:
+
 Install BepInEx 5 (x64): Download the 64-bit release of BepInEx 5 and extract its contents into your main The Walking Zombie 2 installation directory (where TheWalkingZombie2.exe is located). Launch the game once to generate the BepInEx\plugins\ folder, then close it.
+
 Download the Mod: Click Download BroomWeaponMod.zip on this page.
+
 Extract to Plugins Folder: Extract BroomWeaponMod.zip directly into your main The Walking Zombie 2 folder. Verify that BroomWeaponMod.dll and the weapon icon file are located inside The Walking Zombie 2\BepInEx\plugins\BroomWeaponMod.
+
 Get the Broom In-Game: Launch The Walking Zombie 2, load your save file, and check trader inventories in Woodlands (1%), Springfield (2%), City of the Sun (3%), or Northtown (4%).
 
 Troubleshooting & FAQ:
 
 Broom isn't showing up at traders: Because the spawn chance is low (1%–4% depending on the settlement), it may take a few trader inventory refreshes to appear. Also, double-check that you installed the x64 version of BepInEx 5 (not x86 or BepInEx 6).
+
 Folder structure issues: Double-check that you didn't accidentally create a nested folder (such as BepInEx\plugins\BroomWeaponMod\BroomWeaponMod). The .dll file should sit directly inside BepInEx\plugins\BroomWeaponMod.
+
 Safe to remove? Yes—because this mod uses Harmony patches at runtime, removing the BroomWeaponMod folder cleanly uninstalls the plugin.
